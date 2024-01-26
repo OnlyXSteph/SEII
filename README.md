@@ -14,11 +14,11 @@
 
 **SonarLint:** Method names should comply with a naming convention (java:S100)
 <img src='/method.png' width=''/>
-**Fix:** by renaming "Get_Max_Flight_Distance" method to match naming convention.
+**Fix:** by renaming "Get_Max_Flight_Distance" method to "getMaxFlightDistance" in order to match naming convention.
 
 **SonarLint:** Package names should comply with a naming convention (java:S120)
 <img src='/package.png' width=''/>
-**Fix:** by renaming "Planes" package to match naming convention.
+**Fix:** by renaming "Planes" package to "planes" in order to match naming convention.
 
 **SonarLint:** Modifiers should be declared in the correct order (java:S1124)
 <img src='/wrongorder.png' width=''/>
@@ -27,6 +27,11 @@
 **SonartLint:** Constructors of an "abstract" class should not be declared "public" (java:S5993)
 <img src='/constructor.png' width=''/>
 **Fix:** "protected" instead of "public".
+
+**SonartLint:** 
+<img src='/temporaryvariable.png' width=''/>
+**Fix:** use inline expression "return this.maxLoadCapacity"
+
 
 
 
