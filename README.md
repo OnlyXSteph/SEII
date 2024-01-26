@@ -28,7 +28,7 @@
 <img src='/constructor.png' width=''/>
 **Fix:** "protected" instead of "public".
 
-**SonartLint:** 
+**SonartLint:** Local variables should not be declared and then immediately returned or thrown (java:S1488)
 <img src='/temporaryvariable.png' width=''/>
 **Fix:** use inline expression "return this.maxLoadCapacity"
 
