@@ -1,2 +1,4 @@
 # SEII
-Course work for Software Engineering II
+Course work for Software Engineering II.
+
+View branches for assignments. 
