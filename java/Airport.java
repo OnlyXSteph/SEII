@@ -1,10 +1,15 @@
-import Planes.experimentalPlane;
-import models.MilitaryType;
-import Planes.MilitaryPlane;
-import Planes.PassengerPlane;
-import Planes.Plane;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
-import java.util.*;
+import models.MilitaryType;
+import planes.MilitaryPlane;
+import planes.PassengerPlane;
+import planes.Plane;
+import planes.experimentalPlane;
 
 // version: 1.1
 // made by Vitali Shulha
@@ -90,7 +95,7 @@ public class Airport {
     public Airport sortByMaxDistance() {
         Collections.sort(planes, new Comparator<Plane>() {
             public int compare(Plane o1, Plane o2) {
-                return o1.Get_Max_Flight_Distance() - o2.Get_Max_Flight_Distance();
+                return o1.getMaxFlightDistance() - o2.getMaxFlightDistance();
             }
         });
         return this;
