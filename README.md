@@ -6,7 +6,7 @@
 
 SonarLint was able to detect a number of code smells within the target project. While going through the code, I had to consider what changes were necessary to improve readability and cleanliness while keeping functionality. Overall, the code smells were simple fixes so I managed to fix each one without having to make compromises on how the project worked. As a developer, it would be important to detect smells in a project in order to maintain a clean and healthy codebase. Detecting and dealing with code smells is a good measure to ensure success in development.
 
-## Code Smells Found
+## Code Smells Found (14)
 
 
 ### 1. SonarLint: Sections of code should not be commented out (java:S125)
