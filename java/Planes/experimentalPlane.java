@@ -3,7 +3,7 @@ package planes;
 import models.ClassificationLevel;
 import models.ExperimentalTypes;
 
-public class experimentalPlane extends Plane{
+public class ExperimentalPlane extends Plane{
 
     private ExperimentalTypes type;
     private ClassificationLevel classificationLevel;

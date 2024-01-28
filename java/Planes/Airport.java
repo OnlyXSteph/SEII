@@ -1,3 +1,5 @@
+package planes;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -10,10 +12,6 @@ import planes.MilitaryPlane;
 import planes.PassengerPlane;
 import planes.Plane;
 import planes.experimentalPlane;
-
-// version: 1.1
-// made by Vitali Shulha
-// 4-Jan-2019
 
 public class Airport {
     private List<? extends Plane> planes;
@@ -32,11 +30,8 @@ public class Airport {
         for (Plane plane : planes) {
             if (plane instanceof MilitaryPlane) {
                 militaryPlanes.add((MilitaryPlane) plane);
-            } //if
-            else {
-
-            } // else
-        } //for
+            } 
+        } 
         return militaryPlanes;
     }
 
@@ -93,47 +88,26 @@ public class Airport {
     }
 
     public Airport sortByMaxDistance() {
-        Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMaxFlightDistance() - o2.getMaxFlightDistance();
-            }
-        });
+        planes.sort((o1, o2) -> o1.getMaxFlightDistance() - o2.getMaxFlightDistance());
         return this;
     }
-
 
     /**
      * Sorts by max speed
      * @return Airport
      */
     public Airport sortByMaxSpeed() {
-        Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMS() - o2.getMS();
-            }
-        });
+        planes.sort((o1, o2) -> o1.getMaxSpeed() - o2.getMaxSpeed());
         return this;
     }
 
     public Airport sortByMaxLoadCapacity() {
-        Collections.sort(planes, new Comparator<Plane>() {
-            public int compare(Plane o1, Plane o2) {
-                return o1.getMinLoadCapacity() - o2.getMinLoadCapacity();
-            }
-        });
+        planes.sort(Comparator.comparingInt(Plane::getMinLoadCapacity));
         return this;
     }
 
     public List<? extends Plane> getPlanes() {
         return planes;
-    }
-
-    private void print(Collection<? extends Plane> collection) {
-        Iterator<? extends Plane> iterator = collection.iterator();
-        while (iterator.hasNext()) {
-            Plane plane = iterator.next();
-            System.out.println(plane);
-        }
     }
 
     @Override
