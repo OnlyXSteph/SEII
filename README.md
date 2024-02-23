@@ -6,6 +6,10 @@ some summary
 
 ## Set Up
 
+```
+git clone https://github.com/facebook/pyre-check.git
+cd pyre-check
+```
 
 ## Exercise 1:
 
