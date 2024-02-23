@@ -3,6 +3,7 @@
 **Using:** [Tutorial](https://github.com/facebook/pyre-check/tree/main/documentation/pysa_tutorial)
 
 PySa is an open source static analysis tool to detect and prevent security issues in Python code.
+<br>
 
 ## Set Up
 
@@ -19,6 +20,7 @@ source tutorial/bin/activate
 pip3 install pyre-check fb-sapp django-stubs
 ```
 <br> 
+
 ## Exercise 1:
 
 <img src='/screenshots/catfiles.png' width=''/>
