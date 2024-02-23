@@ -30,6 +30,59 @@ pip3 install pyre-check fb-sapp django-stubs
 
 ## Exercise 2:
 
-### Something
-<img src='/screenshots/.png' width=''/>
-Description
+### sources_sinks.pysa 
+```
+django.http.request.HttpRequest.GET: TaintSource[CustomUserControlled] = ...
+django.http.request.HttpRequest.POST: TaintSource[CustomUserControlled] = ...
+
+def eval(__source: TaintSink[CodeExecution], __globals, __locals): ...
+def exec(__source: TaintSink[CodeExecution], __globals, __locals): ...
+
+def subprocess.getoutput(cmd: TaintSink[ShellExecution]): ...
+```
+<br>
+
+### taint.config
+```
+{
+  "sources": [
+    {
+      "name": "CustomUserControlled",
+      "comment": "use to annotate user input"
+    }
+  ],
+
+  "sinks": [
+    {
+      "name": "CodeExecution",
+      "comment": "use to annotate execution of python code"
+    },
+    {
+      "name": "ShellExecution",
+      "comment": "use to annotate execution of shell scripts"
+    }
+  ],
+
+  "features": [],
+
+  "rules": [
+    {
+      "name": "Possible RCE:",
+      "code": 5001,
+      "sources": [ "CustomUserControlled" ],
+      "sinks": [ "CodeExecution" ],
+      "message_format": "User specified data may reach a code execution sink"
+    },
+    {
+      "name": "Possible Shell Execution:",
+      "code": 9001,
+      "sources": [ "CustomUserControlled" ],
+      "sinks": [ "ShellExecution" ],
+      "message_format": "User specified data may reach a shell execution sink"
+    }
+  ]
+}
+```
+<br>
+
+<img src='/screenshots/outputtwo.png' width=''/>
