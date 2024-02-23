@@ -18,13 +18,12 @@ python3 -m venv tutorial
 source tutorial/bin/activate
 pip3 install pyre-check fb-sapp django-stubs
 ```
-
+<br> 
 ## Exercise 1:
 
-### Something
-<img src='/screenshots/.png' width=''/>
-Description
+<img src='/screenshots/catfiles.png' width=''/>
 
+<img src='/screenshots/outputone.png' width=''/>
 
 
 ## Exercise 2:
